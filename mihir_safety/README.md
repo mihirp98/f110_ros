@@ -13,7 +13,7 @@ The safety node listens to the `\odom` and `\scan` topic to calculate the TTC us
 Here, _r_ is the distance between the two objects which is obtained from the laser scan message. In the denominator,we take the max of 0 and the velocity in the direction of the scan.
 
 ## Parameters
-The `ttc_threshold_` parameter in `safety_node.cpp` needs to be tuned if operating on the actual car. The current value is set for the simulator.
+The `ttc_thres` parameter in `safety_node.cpp` needs to be tuned if operating on the actual car. The current value is set for the simulator.
 
 ## Dependencies
 - sensor_msgs
