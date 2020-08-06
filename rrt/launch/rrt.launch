@@ -1,0 +1,7 @@
+<launch>
+	<!-- <include file="$(find f110_simulator)/launch/simulator.launch"/> -->
+	<rosparam command="load" file="/home/mihir/mihir_ws/src/f110_ros/rrt/rrt_params.yaml" />
+	<node pkg="rrt" type="rrt_node" name="rrt_node" />
+	<node pkg="rviz" type="rviz" name="roslab_rviz_mihir" args="-d /home/mihir/mihir_ws/src/f110_ros/rrt/launch/rrt_rviz.rviz" />
+    <!-- <node pkg="rviz" type="rviz" name="roslab_rviz_mihir" args="-d /home/mihir/mihir_ws/src/mihir_roslab/launch/mihir_roslab.rviz" /> -->
+</launch>

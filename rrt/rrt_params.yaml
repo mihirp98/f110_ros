@@ -1,0 +1,48 @@
+#Topic to subscribe from
+pose_topic: "gt_pose"
+scan_topic: "scan"
+
+#Topic to publish at
+map_topic: "map"
+marker_topic: "waypoint_vis"
+map_publish_topic: "new_map"
+
+#angle to consider for updating the map
+angle_ahead: 4.71
+
+#radius to expand the hit point by
+expand_radius: 5
+
+#The lookahead distance from where to sample the x_rand from
+lookahead_distance: 1.5
+
+#lookahead for local best node
+pure_pursuit_lookahead: 1.2
+
+#maximum expansion distance to get x_new
+expand_distance: 1.0
+
+#discretization for collision check
+collision_discretization: 100
+
+#threshold to check if close enough to the goal
+goal_close_enough: 0.5
+
+#number of iterations for RRT
+RRT_iters: 5000
+
+#waypoints csv file path
+file_path: "/home/mihir/mihir_ws/src/f110_ros/pure_pursuit/wp-2020-03-09-17-11-00.csv"
+
+#radius to search around in for rrt*
+search_radius: 1.5
+
+#put true if you want rrt*
+rrt_star: true
+# rrt_star: false
+
+# Topics that RRT publishes to
+# TODO: add your own
+# visualization
+
+# TODO: add Parameters for RRT
