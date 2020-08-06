@@ -29,7 +29,6 @@ public:
     rad_angle = 0;
     min_range_index = start_i = end_i = 0;
     increment = 0.00582315586507;
-    // ranges = vector<float>(1080);
     speed = 1.0;
     gap_thres = 1.2;
     angle_min = 0;
@@ -79,8 +78,6 @@ public:
     int count =  0;
     int prev_max_count = 0;
     int result = 0;
-//    int start_i = 0;
-//    int end_i = 0;
 
     for(int i=0; i < proc_ranges.size(); i++)
     {
@@ -98,53 +95,13 @@ public:
         count += 1;
       }
     }
-    //return make_tuple(start_i, end_i);
-  }
 
-  // int best_point(vector<float> proc_ranges, int start_i, int end_i)
-  // { 
-  //   float max_range = 0;
-  //   int prev_dist = 1000;
-  //   int max_index = 0; 
-  //   for(int i = start_i; i <= end_i; i++)
-  //   {      
-  //     if(proc_ranges[i] == 3.0 && abs(i - 270) < prev_dist)
-  //     { 
-  //         max_range = proc_ranges[i];
-  //         prev_dist = abs(i - 270);
-  //         max_index = i;
-  //     } else if(proc_ranges[i] > max_range){
-  //       max_range = proc_ranges[i];
-  //       max_index = i;
-  //       prev_dist = abs(i - 270);
-  //     }
-  //   }
-  //   return max_index;
-  // }
+  }
 
   int best_point(vector<float> proc_ranges, int start_i, int end_i)
   { 
-    // if ((start_i < 270 && end_i > 270) && proc_ranges[270] == 4.0)
-    // {
-    //   return 270;
-    // } else 
-      {return round((start_i + end_i)/2);}
+      return round((start_i + end_i)/2);
   }
-
-  // int best_point(vector<float> proc_ranges, int start_i, int end_i)
-  // { 
-  //   double max_range = 0.0;
-  //   int best_index = 0;
-  //   for (int i = start_i; i < end_i; i++)
-  //   {
-  //     if(proc_ranges[i] > max_range)
-  //     {
-  //       best_index = i;
-  //       max_range = proc_ranges[i];
-  //     }
-  //   }
-  //   return best_index;
-  // }
 
   double get_steering_angle(int best_index, vector<float> proc_ranges)
   { 
@@ -166,7 +123,6 @@ public:
 
   double get_speed(float steering_angle)
   { 
-    //steering_angle = clip(steering_angle, -0.44, 0.44);
     if ((abs(steering_angle) >= 0) && (abs(steering_angle) < 0.174533)){
       speed = 1.0; //2.5, 3.5, 4.5
     } else if ((abs(steering_angle) >= 0.174533) && (abs(steering_angle) < 0.4)){ //0.349066
@@ -193,8 +149,8 @@ public:
     drive_msg.drive.steering_angle = steering_angle; //steering_angle
     drive_msg.drive.speed = get_speed(steering_angle); //speed
     nav_pub.publish(drive_msg);
-    ROS_INFO("start_i = %d, end_i = %d, best_index_range = %f", start_i, end_i, proc_ranges[best_index]);
-    ROS_INFO("zero_range = %f, best_index = %d, s_angle = %f", proc_ranges[270], best_index, steering_angle);
+    // ROS_INFO("start_i = %d, end_i = %d, best_index_range = %f", start_i, end_i, proc_ranges[best_index]);
+    // ROS_INFO("zero_range = %f, best_index = %d, s_angle = %f", proc_ranges[270], best_index, steering_angle);
   }
   
 
