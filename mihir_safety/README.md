@@ -6,6 +6,10 @@ We implement a safety node for the car that will stop the car from collision whi
 The safety node listens to the `\odom` and `\scan` topic to calculate the TTC using the formula,
 
 
+![Alt text](https://github.com/mihirp98/f110_ros/raw/master/mihir_safety/ttc.gif)
+
+
+
 Here, _r_ is the distance between the two objects which is obtained from the laser scan message. In the denominator,we take the max of 0 and the velocity in the direction of the scan.
 
 ## Parameters
