@@ -5,8 +5,8 @@ This package implements both RRT and RRT* algorithms for motion planning. You ca
 ## Usage
 
 Make sure to have the F1/10 simulator before you run this package
-- Launch the simulator with `roslaunch team4_rrt_star rrt.launch`
-- Launch the rrt node with `rosrun team4_rrt_star team4_rrt_star_node`
+- Launch the simulator with `roslaunch rt_star rrt.launch`
+- Launch the rrt node with `rosrun rrt_star rrt_star_node`
 
 ## Dependencies
 - sensor_msgs
