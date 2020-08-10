@@ -10,7 +10,7 @@ RRT::~RRT()
 
 RRT::RRT(ros::NodeHandle &nh): nh_(nh), gen((std::random_device())()), tf2_listener_(tf_buffer_)
 {
-    filename_ = "/home/mihir/mihir_ws/src/f110_ros/rrt/data/pp.csv";
+    filename_ = "/home/mihir/mihir_ws/src/f110_ros/rrt/wp-2020-03-09-17-11-00.csv";
     delimiter_ = ",";
 
     // Load first Map from map_server
