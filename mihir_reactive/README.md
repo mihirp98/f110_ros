@@ -22,3 +22,5 @@ Launch the node along with the simulator by using the command `roslaunch mihir_r
 ## Video
 
 The video can be found at the [link](https://youtu.be/35hiO220y4A)
+
+![Alt Text](https://github.com/mihirp98/f110_ros/blob/master/mihir_reactive/ftg.gif)
