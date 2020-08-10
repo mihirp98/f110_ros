@@ -20,4 +20,4 @@ Make sure to have the F1/10 simulator before you run this package
 - f110_simulator
 
 ## Video
-- The video can be found on the link [link](https://youtu.be/utUAKjqXxJI)
+- The video can be found on the [link](https://youtu.be/utUAKjqXxJI)
