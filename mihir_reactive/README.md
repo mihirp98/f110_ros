@@ -21,4 +21,4 @@ Launch the node along with the simulator by using the command `roslaunch mihir_r
 
 ## Video
 
-The video can be found at the [link](https://youtu.be/MbgIoJIT6lI)
+The video can be found at the [link](https://youtu.be/35hiO220y4A)
